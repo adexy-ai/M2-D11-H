@@ -50,19 +50,23 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //   const options = {
-      //     method: "GET",
-      //     headers: {
-      //       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-      //       "X-RapidAPI-Key":
-      //         "23bb3e4f20mshbc8293c16c44462p1938cajsn1a2b60d7cad2",
-      //     },
-      //   };
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+          "X-RapidAPI-Key":
+            "23bb3e4f20mshbc8293c16c44462p1938cajsn1a2b60d7cad2",
+        },
+      };
 
-      fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=pink%20floyd")
+      fetch(
+        "https://deezerdevs-deezer.p.rapidapi.com/search?q=pink%20floyd",
+        options
+      )
         .then((resObj1) => resObj1.json())
         .then((data) => {
-            console.log(data))}
+          console.log(data);
+        })
 
         .catch((err) => console.error(err));
 
